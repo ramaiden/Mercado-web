@@ -1,0 +1,22 @@
+{{!-- {{> Menu }} --}}
+{{> Menu numero="4" }}
+
+{{!-- Paso 3 --}}
+<h1>Esta es la página de Inicio</h1>
+{{#if usuario}}
+<h1>
+Bienvenid@: {{usuario}}
+</h1>
+<h3>Tus ventas hoy fueron las siguientes:</h3>
+<ol>
+{{!-- Paso 4 --}}
+{{#each ventas}}
+<li>${{this}}</li>
+{{/each}}
+</ol>
+{{/if}}
+
+{{!-- Paso 5--}}
+{{#unless usuario}}
+<h1>Inicie sesión para ver sus ventas</h1>
+{{/unless}}
